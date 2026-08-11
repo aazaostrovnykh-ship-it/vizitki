@@ -7,12 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* ——— все стили (как в предыдущем варианте) ——— */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
       background: #f8fafc;
@@ -23,24 +19,14 @@
       flex-direction: column;
       line-height: 1.6;
     }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      width: 100%;
-    }
-
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; width: 100%; }
     header {
       padding: 1.5rem 0;
       background: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(6px);
       border-bottom: 2px solid #0d9488;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      position: sticky; top: 0; z-index: 10;
     }
-
     .header-inner {
       display: flex;
       align-items: center;
@@ -48,204 +34,81 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-
     .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      color: #1e293b;
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; color: #1e293b;
     }
-
     .logo i {
-      font-size: 2.2rem;
-      color: #0d9488;
-      background: #e6f7f5;
-      padding: 0.4rem;
-      border-radius: 14px;
-      transition: transform 0.2s;
+      font-size: 2.2rem; color: #0d9488; background: #e6f7f5;
+      padding: 0.4rem; border-radius: 14px; transition: transform 0.2s;
     }
-
-    .logo i:hover {
-      transform: rotate(-10deg) scale(1.05);
-    }
-
-    .logo .highlight {
-      color: #0d9488;
-    }
-
+    .logo i:hover { transform: rotate(-10deg) scale(1.05); }
+    .logo .highlight { color: #0d9488; }
     .header-right {
       display: flex;
       align-items: center;
       gap: 1.5rem;
       flex-wrap: wrap;
     }
-
     .tagline {
-      font-weight: 400;
-      color: #475569;
-      background: #e6f7f5;
-      padding: 0.4rem 1.2rem;
-      border-radius: 40px;
-      border: 1px solid #b2dfdb;
-      font-size: 0.95rem;
-      box-shadow: 0 2px 6px rgba(13, 148, 136, 0.08);
+      font-weight: 400; color: #475569; background: #e6f7f5;
+      padding: 0.4rem 1.2rem; border-radius: 40px;
+      border: 1px solid #b2dfdb; font-size: 0.95rem;
+      box-shadow: 0 2px 6px rgba(13,148,136,0.08);
     }
-
-    .tagline i {
-      margin-right: 0.4rem;
-      color: #0d9488;
-    }
-
+    .tagline i { margin-right: 0.4rem; color: #0d9488; }
     .contact-phone {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 600;
-      color: #0d9488;
-      background: #fff;
-      padding: 0.4rem 1rem;
-      border-radius: 40px;
-      border: 1px solid #0d9488;
-      transition: all 0.2s;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-weight: 600; color: #0d9488; background: #fff;
+      padding: 0.4rem 1rem; border-radius: 40px;
+      border: 1px solid #0d9488; transition: all 0.2s;
       text-decoration: none;
     }
-
-    .contact-phone:hover {
-      background: #0d9488;
-      color: #fff;
-    }
-
-    .contact-phone i {
-      font-size: 1rem;
-    }
-
+    .contact-phone:hover { background: #0d9488; color: #fff; }
+    .contact-phone i { font-size: 1rem; }
     .hero {
-      background: #ffffff;
-      border-radius: 24px;
-      padding: 2rem 2.5rem;
-      margin: 2.5rem 0 2rem;
-      border-left: 8px solid #0d9488;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      align-items: center;
+      background: #ffffff; border-radius: 24px; padding: 2rem 2.5rem;
+      margin: 2.5rem 0 2rem; border-left: 8px solid #0d9488;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;
       transition: all 0.3s;
     }
-
-    .hero:hover {
-      box-shadow: 0 12px 40px rgba(13, 148, 136, 0.15);
-    }
-
+    .hero:hover { box-shadow: 0 12px 40px rgba(13,148,136,0.15); }
     .hero-icon {
-      font-size: 3rem;
-      color: #0d9488;
-      flex-shrink: 0;
-      background: #e6f7f5;
-      width: 70px;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 20px;
+      font-size: 3rem; color: #0d9488; flex-shrink: 0;
+      background: #e6f7f5; width: 70px; height: 70px;
+      display: flex; align-items: center; justify-content: center; border-radius: 20px;
     }
-
-    .hero-text h1 {
-      font-weight: 600;
-      font-size: 1.8rem;
-      color: #0d9488;
-      margin-bottom: 0.2rem;
-    }
-
-    .hero-text p {
-      color: #334155;
-      max-width: 700px;
-    }
-
+    .hero-text h1 { font-weight: 600; font-size: 1.8rem; color: #0d9488; margin-bottom: 0.2rem; }
+    .hero-text p { color: #334155; max-width: 700px; }
     .hero-badge {
-      background: #0d9488;
-      color: #fff;
-      font-weight: 700;
-      padding: 0.4rem 1.4rem;
-      border-radius: 40px;
-      font-size: 0.9rem;
-      white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+      background: #0d9488; color: #fff; font-weight: 700;
+      padding: 0.4rem 1.4rem; border-radius: 40px; font-size: 0.9rem;
+      white-space: nowrap; box-shadow: 0 4px 12px rgba(13,148,136,0.3);
     }
-
-    .form-title {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-top: 0.5rem;
-      margin-bottom: 0.2rem;
-      color: #0f172a;
-    }
-
-    .form-title i {
-      color: #0d9488;
-      margin-right: 0.5rem;
-    }
-
+    .form-title { font-size: 1.8rem; font-weight: 600; margin-top: 0.5rem; margin-bottom: 0.2rem; color: #0f172a; }
+    .form-title i { color: #0d9488; margin-right: 0.5rem; }
     .form-subtitle {
-      color: #475569;
-      margin-bottom: 2rem;
-      border-left: 4px solid #0d9488;
-      padding-left: 1.2rem;
-      font-size: 1.05rem;
+      color: #475569; margin-bottom: 2rem;
+      border-left: 4px solid #0d9488; padding-left: 1.2rem; font-size: 1.05rem;
     }
-
     .form-card {
-      background: #ffffff;
-      border-radius: 28px;
-      padding: 2.5rem;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
-      border: 1px solid #e2e8f0;
-      margin-bottom: 3rem;
+      background: #ffffff; border-radius: 28px; padding: 2.5rem;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0; margin-bottom: 3rem;
       transition: box-shadow 0.3s;
     }
-
-    .form-card:hover {
-      box-shadow: 0 20px 60px rgba(13, 148, 136, 0.08);
-    }
-
+    .form-card:hover { box-shadow: 0 20px 60px rgba(13,148,136,0.08); }
     .form-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.8rem 2rem;
     }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .form-group.full-width {
-      grid-column: 1 / -1;
-    }
-
-    .form-group label {
-      font-weight: 500;
-      font-size: 0.9rem;
-      color: #1e293b;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .form-group label i {
-      color: #0d9488;
-      width: 1.2rem;
-    }
-
-    .form-group label .required {
-      color: #ef4444;
-      margin-left: 0.2rem;
-    }
-
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group.full-width { grid-column: 1 / -1; }
+    .form-group label { font-weight: 500; font-size: 0.9rem; color: #1e293b; display: flex; align-items: center; gap: 0.4rem; }
+    .form-group label i { color: #0d9488; width: 1.2rem; }
+    .form-group label .required { color: #ef4444; margin-left: 0.2rem; }
     .form-group input,
     .form-group select,
     .form-group textarea {
@@ -259,66 +122,33 @@
       transition: all 0.25s;
       outline: none;
     }
-
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
       border-color: #0d9488;
       background: #ffffff;
-      box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.15);
+      box-shadow: 0 0 0 4px rgba(13,148,136,0.15);
     }
-
     .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: #94a3b8;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 80px;
-    }
-
-    .form-group .hint {
-      font-size: 0.75rem;
-      color: #64748b;
-      margin-top: 0.2rem;
-    }
-
+    .form-group textarea::placeholder { color: #94a3b8; }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-group .hint { font-size: 0.75rem; color: #64748b; margin-top: 0.2rem; }
     .radio-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem 1.5rem;
-      padding-top: 0.3rem;
+      display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; padding-top: 0.3rem;
     }
-
     .radio-group label {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 400;
-      color: #1e293b;
-      cursor: pointer;
-      background: #f8fafc;
-      padding: 0.2rem 0.8rem 0.2rem 0.5rem;
-      border-radius: 30px;
-      transition: background 0.2s;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-weight: 400; color: #1e293b; cursor: pointer;
+      background: #f8fafc; padding: 0.2rem 0.8rem 0.2rem 0.5rem;
+      border-radius: 30px; transition: background 0.2s;
     }
-
-    .radio-group label:hover {
-      background: #e6f7f5;
-    }
-
+    .radio-group label:hover { background: #e6f7f5; }
     .radio-group input[type="radio"] {
-      accent-color: #0d9488;
-      width: 1.1rem;
-      height: 1.1rem;
-      cursor: pointer;
+      accent-color: #0d9488; width: 1.1rem; height: 1.1rem; cursor: pointer;
     }
-
     .file-upload-wrapper {
       position: relative;
     }
-
     .file-upload-wrapper input[type="file"] {
       padding: 0.7rem 0;
       border: none;
@@ -326,7 +156,6 @@
       cursor: pointer;
       font-size: 0.9rem;
     }
-
     .file-upload-wrapper input[type="file"]::file-selector-button {
       background: #e6f7f5;
       border: 2px solid #0d9488;
@@ -338,76 +167,36 @@
       cursor: pointer;
       transition: all 0.2s;
     }
-
     .file-upload-wrapper input[type="file"]::file-selector-button:hover {
       background: #0d9488;
       color: #fff;
     }
-
     .form-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      margin-top: 2.2rem;
-      justify-content: flex-end;
-      align-items: center;
+      display: flex; flex-wrap: wrap; gap: 1.2rem;
+      margin-top: 2.2rem; justify-content: flex-end; align-items: center;
     }
-
     .btn {
-      padding: 0.8rem 2.4rem;
-      border: none;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
+      padding: 0.8rem 2.4rem; border: none; border-radius: 40px;
+      font-weight: 600; font-size: 1rem; cursor: pointer;
       transition: all 0.25s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.7rem;
+      display: inline-flex; align-items: center; gap: 0.7rem;
     }
-
     .btn-primary {
-      background: #f97316;
-      color: #fff;
-      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+      background: #f97316; color: #fff;
+      box-shadow: 0 4px 14px rgba(249,115,22,0.3);
     }
-
     .btn-primary:hover {
-      background: #ea580c;
-      transform: scale(1.04);
-      box-shadow: 0 8px 28px rgba(249, 115, 22, 0.4);
+      background: #ea580c; transform: scale(1.04);
+      box-shadow: 0 8px 28px rgba(249,115,22,0.4);
     }
-
-    .btn-secondary {
-      background: #e2e8f0;
-      color: #1e293b;
-    }
-
-    .btn-secondary:hover {
-      background: #cbd5e1;
-      transform: scale(1.02);
-    }
-
+    .btn-secondary { background: #e2e8f0; color: #1e293b; }
+    .btn-secondary:hover { background: #cbd5e1; transform: scale(1.02); }
     footer {
-      border-top: 1px solid #e2e8f0;
-      padding: 1.8rem 0;
-      margin-top: 1rem;
-      text-align: center;
-      color: #64748b;
-      font-size: 0.9rem;
-      background: #ffffff;
+      border-top: 1px solid #e2e8f0; padding: 1.8rem 0; margin-top: 1rem;
+      text-align: center; color: #64748b; font-size: 0.9rem; background: #ffffff;
     }
-
-    footer a {
-      color: #0d9488;
-      font-weight: 500;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
+    footer a { color: #0d9488; font-weight: 500; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
     .footer-links {
       display: flex;
       justify-content: center;
@@ -415,39 +204,15 @@
       flex-wrap: wrap;
       margin-top: 0.5rem;
     }
-
     @media (max-width: 700px) {
-      .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .header-right {
-        width: 100%;
-        justify-content: flex-start;
-      }
-      .hero {
-        padding: 1.5rem;
-        flex-direction: column;
-        text-align: center;
-        border-left: none;
-        border-top: 8px solid #0d9488;
-      }
-      .hero-badge {
-        align-self: center;
-      }
-      .form-card {
-        padding: 1.5rem;
-      }
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-      .form-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .btn {
-        justify-content: center;
-      }
+      .header-inner { flex-direction: column; align-items: flex-start; }
+      .header-right { width: 100%; justify-content: flex-start; }
+      .hero { padding: 1.5rem; flex-direction: column; text-align: center; border-left: none; border-top: 8px solid #0d9488; }
+      .hero-badge { align-self: center; }
+      .form-card { padding: 1.5rem; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-actions { flex-direction: column; align-items: stretch; }
+      .btn { justify-content: center; }
     }
   </style>
 </head>
@@ -629,6 +394,9 @@
       <div class="footer-links">
         <a href="tel:+79960320581"><i class="fas fa-phone"></i> +7 996 032-05-81</a>
         <a href="https://web.max.ru/+79960320581" target="_blank"><i class="fas fa-link"></i> MAX</a>
+        <!-- Ссылки на другие разделы -->
+        <a href="https://print-games.ru"><i class="fas fa-print"></i> Полиграфия</a>
+        <a href="https://site.print-games.ru"><i class="fas fa-dice-d6"></i> Настольные игры</a>
         <a href="#">Политика конфиденциальности</a>
       </div>
     </div>
@@ -637,13 +405,9 @@
   <script>
     (function() {
       'use strict';
-
       const form = document.getElementById('orderForm');
-
       form.addEventListener('submit', function(e) {
         e.preventDefault();
-
-        // Обязательные поля
         const clientName = document.getElementById('clientName');
         const clientPhone = document.getElementById('clientPhone');
         const cardType = document.getElementById('cardType');
@@ -651,35 +415,26 @@
         const colorType = document.querySelector('input[name="colorType"]:checked');
         const design = document.getElementById('design');
         const circulation = document.getElementById('circulation');
-
         if (!clientName.value || !clientPhone.value || !cardType.value || !material.value || !colorType || !design.value || !circulation.value) {
           alert('Пожалуйста, заполните все обязательные поля (отмечены *).');
           return;
         }
-
-        // Собираем данные
         const data = new FormData(form);
         let body = '📇 Новая заявка на визитки (Игрострой)\n\n';
         for (let [key, value] of data.entries()) {
           if (key === 'finish') continue;
           if (key === 'colorType') continue;
-          if (key === 'fileUpload') continue; // обработаем отдельно
+          if (key === 'fileUpload') continue;
           body += `${key}: ${value || '—'}\n`;
         }
-
-        // Отделка (multiple select)
         const finishSelect = document.getElementById('finish');
         const finishValues = [];
         for (let option of finishSelect.options) {
           if (option.selected) finishValues.push(option.value);
         }
         body += `finish: ${finishValues.length ? finishValues.join(', ') : '—'}\n`;
-
-        // Цветность (радио)
         const colorChecked = document.querySelector('input[name="colorType"]:checked');
         body += `colorType: ${colorChecked ? colorChecked.value : '—'}\n`;
-
-        // Загруженный файл
         const fileInput = document.getElementById('fileUpload');
         if (fileInput.files.length > 0) {
           body += `fileUpload: ${fileInput.files[0].name} (размер: ${(fileInput.files[0].size / 1024).toFixed(1)} КБ)\n`;
@@ -687,16 +442,10 @@
         } else {
           body += `fileUpload: файл не загружен\n`;
         }
-
-        // Формируем письмо
         const subject = encodeURIComponent('Заявка на изготовление визиток');
-        const mailto = `mailto:a.a.zaostrovnykh@yandex.ru?subject=${subject}&body=${encodeURIComponent(body)}`;
-
-        window.location.href = mailto;
-
+        window.location.href = `mailto:a.a.zaostrovnykh@yandex.ru?subject=${subject}&body=${encodeURIComponent(body)}`;
         alert('✅ Заявка открыта в вашем почтовом клиенте.\nПроверьте данные и отправьте письмо на a.a.zaostrovnykh@yandex.ru');
       });
-
     })();
   </script>
 </body>
