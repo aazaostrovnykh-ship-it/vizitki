@@ -76,6 +76,13 @@
       color: #0d9488;
     }
 
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
     .tagline {
       font-weight: 400;
       color: #475569;
@@ -90,6 +97,29 @@
     .tagline i {
       margin-right: 0.4rem;
       color: #0d9488;
+    }
+
+    .contact-phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      color: #0d9488;
+      background: #fff;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      border: 1px solid #0d9488;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .contact-phone:hover {
+      background: #0d9488;
+      color: #fff;
+    }
+
+    .contact-phone i {
+      font-size: 1rem;
     }
 
     .hero {
@@ -371,16 +401,29 @@
     footer a {
       color: #0d9488;
       font-weight: 500;
+      text-decoration: none;
     }
 
     footer a:hover {
       text-decoration: underline;
     }
 
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
     @media (max-width: 700px) {
       .header-inner {
         flex-direction: column;
         align-items: flex-start;
+      }
+      .header-right {
+        width: 100%;
+        justify-content: flex-start;
       }
       .hero {
         padding: 1.5rem;
@@ -415,8 +458,13 @@
         <i class="fas fa-id-card"></i>
         <span>Игро<span class="highlight">строй</span></span>
       </div>
-      <div class="tagline">
-        <i class="fas fa-print"></i> Визитки · от идеи до тиража
+      <div class="header-right">
+        <div class="tagline">
+          <i class="fas fa-print"></i> Визитки · от идеи до тиража
+        </div>
+        <a href="tel:+79960320581" class="contact-phone">
+          <i class="fas fa-phone-alt"></i> +7 996 032-05-81
+        </a>
       </div>
     </div>
   </header>
@@ -577,11 +625,12 @@
 
   <footer>
     <div class="container">
-      <p>© 2026 Игрострой — студия разработки и печати настольных игр и визиток.</p>
-      <p style="margin-top:0.3rem;">
-        <i class="fas fa-envelope" style="color:#0d9488;"></i>
-        <a href="mailto:a.a.zaostrovnykh@yandex.ru">a.a.zaostrovnykh@yandex.ru</a>
-      </p>
+      <p>&copy; 2026 Игрострой — студия разработки и печати настольных игр и визиток.</p>
+      <div class="footer-links">
+        <a href="tel:+79960320581"><i class="fas fa-phone"></i> +7 996 032-05-81</a>
+        <a href="https://web.max.ru/+79960320581" target="_blank"><i class="fas fa-link"></i> MAX</a>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
     </div>
   </footer>
 
